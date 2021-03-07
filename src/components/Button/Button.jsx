@@ -9,7 +9,10 @@ const Button = ({ onDelite, type, children }) => {
     </button>
   );
 };
-
+Button.defaultProps = {
+  onDelite: null,
+  children: null,
+};
 Button.propTypes = {
   onDelite: PropTypes.func,
   children: PropTypes.node,
