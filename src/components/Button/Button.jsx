@@ -2,19 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Button.module.css";
 
-const Button = ({ onDelite, type, children }) => {
+const Button = ({ onClick, type, children }) => {
   return (
-    <button type={type} className={styles.btn} onClick={onDelite}>
+    <button type={type} className={styles.btn} onClick={onClick}>
       {children}
     </button>
   );
 };
 Button.defaultProps = {
-  onDelite: null,
+  onClick: null,
   children: null,
 };
 Button.propTypes = {
-  onDelite: PropTypes.func,
+  onClick: PropTypes.func,
   children: PropTypes.node,
   type: PropTypes.string.isRequired,
 };
