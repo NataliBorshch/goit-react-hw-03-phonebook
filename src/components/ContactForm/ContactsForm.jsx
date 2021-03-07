@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Button from "../Button";
+import { ReactComponent as IconAdd } from "../../icon/add.svg";
 import styles from "./ContactsForm.module.css";
 
 class ContactsForm extends Component {
@@ -45,9 +47,9 @@ class ContactsForm extends Component {
               required
             />
           </label>
-          <button type="submit" className={styles.btn}>
-            add contacts
-          </button>
+          <Button type="submit">
+            <IconAdd width="40" height="40" fill="white" />
+          </Button>
         </form>
       </div>
     );

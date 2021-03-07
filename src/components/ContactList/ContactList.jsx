@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "../Button";
+import { ReactComponent as IconDelite } from "../../icon/delite.svg";
 
 import styles from "./ContactsList.module.css";
 
@@ -10,9 +12,14 @@ const ContactList = ({ contacts, onDelite }) => (
         <li key={ele.id} className={styles.item}>
           <p>{ele.name}</p>
           <p>{ele.number}</p>
-          <button className={styles.btn} onClick={() => onDelite(ele.id)}>
-            Delite
-          </button>
+          <Button onDelite={() => onDelite(ele.id)} type="button">
+            <IconDelite
+              width="30"
+              height="25"
+              fill="white"
+              aria-label="delite"
+            />
+          </Button>
         </li>
       );
     })}
